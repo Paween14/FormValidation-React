@@ -1,0 +1,295 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}  
+body {
+  background: rgb(69,78,87);
+  margin: 0 20%;
+}
+/* main {
+  margin: 0 20%;
+} */
+header {
+  text-align: center;
+  color: white;
+}
+hr {
+  border: 1px solid var(--main-color);
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+p, input[type], textarea, label {
+  font-size: 14px;
+}
+
+input[type]:invalid {
+  color: red;
+}
+
+input[type]:not([type="submit"]):valid, textarea:valid {
+  color: greenyellow;
+}
+
+/* input[type]:required {
+  border-bottom: 2px solid red;
+} */
+
+.popup-notice {
+  position: relative;
+}
+
+.popup-notice span {
+  border-radius: 5px;
+  display: none;
+  font-size: 0.9em;
+  text-align: center;
+  position: absolute;
+  background: rgb(48, 89, 151);
+  right: -160px;
+  bottom: 0;
+  width: 160px;
+  padding: 7px 10px;
+  color: #fff;
+}
+
+span:after {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  /* border-color: rgba(136, 183, 213, 0); */
+  border-right-color: #2F558E;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+
+/* ============= Padding & Margin ============= */
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-1-5 {
+  margin-top: 1.5rem;
+}
+.mb-0-5 {
+  margin-bottom: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-1-5 {
+  margin-bottom: 1.5rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.col-3-4 {
+  width: calc(100%);
+}
+/* ============= Global ============= */
+:root {
+  --main-color: rgb(0,142,204); 
+  --submit-btn-hover: rgb(45,192,255);
+  --grey-1: rgb(117,117,117);
+  --bright-grey: rgb(233,233,233);
+}
+
+/* ============= General ============= */
+.head-section {
+  color: white;
+  text-align: left;
+}
+.grey-1-text {
+  color: var(--grey-1);
+}
+.bright-grey-text {
+  color: var(--bright-grey);
+}
+
+/* ============= Input fields ============= */
+input[type=text], input[type=email], input[type=url], input[type=tel] {
+  width: 100%;
+  padding: 0;
+  display: block;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--grey-1);
+  background: transparent;
+  text-align: left;
+  color: var(--grey-1);
+}
+input[type=checkbox] {
+  display: block;
+}
+input[type=text], input[type=email], input[type=tel] {
+  padding-top: 1.5rem;
+}
+input[type=text]:focus, textarea:focus, input[type=email]:focus , input[type=url]:focus, input[type=tel]:focus {
+  color: var(--bright-grey);
+  border-color: #FFF;
+}
+
+.turn-red-color {
+  color: red important!;
+}
+
+/* input[type=text]:valid, textarea:valid, input[type=email]:valid , input[type=url]:valid, input[type=tel]:valid {
+  border-color: greenyellow;
+  color: greenyellow;
+} */
+
+/* input[type=text]:invalid, textarea:invalid, input[type=email]:invalid , input[type=url]:invalid, input[type=tel]:invalid {
+    border-color: red;
+} */
+
+/* ============= Submit button ============= */
+.submit-btn {
+  background-color: var(--main-color);
+  color: white;
+  padding: 14px 45px;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  /* opacity: 0.7; */
+}
+.submit-btn:hover {
+  /* opacity: 1; */
+  background-color: var(--submit-btn-hover);
+}
+
+
+/* ============================= 
+          Section-1 
+================================*/
+.text-3-4 {
+  width: 601px;
+}
+.text-1-4 {
+  width: 187px;
+  margin-left: 20px;
+}
+
+/* ============================= 
+          Section-2 
+================================*/
+.style-radio {
+  display: none;
+}
+.sec2-container-1 label {
+  color: var(--bright-grey);
+  /* min-width: content; */
+	cursor: pointer;
+	display: inline-block;
+  padding: 15px;
+  border: 1px solid var(--bright-grey);
+  text-align: center;
+	transition: all 0.1s ease;
+}
+.sec2-container-1 label:hover {
+  background: var(--main-color);
+  border: none;
+}
+.style-radio:checked+label {
+  background: var(--main-color);
+  border: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.checkbox label {
+  color: var(--bright-grey);
+	cursor: pointer;
+	display: block;
+  padding: 10px 10px 10px 40px;
+  position: relative;
+}
+.checkbox label:before {
+  background-color: none;
+	border: 1px solid var(--bright-grey);
+	content: "";
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	top: 8px;
+  left: 5px;
+}
+.checkbox label:after  {
+  content: "\2713";
+  font-size: 1.5em;
+  font-weight: bold;
+  display: inline-block;
+  color: var(--bright-grey);
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  visibility: hidden;
+}
+.checkbox label:hover::after {
+  visibility: visible;
+  opacity: 0.5;
+}
+input[type="checkbox"]:checked+label:after {
+  visibility: visible;
+  opacity: 1;
+}
+input[type="checkbox"]:checked+label:before {
+  visibility: none;
+}
+/* ============================= 
+          Section-3 
+================================*/
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--grey-1);
+  padding: 3px;
+  color: var(--grey-1);
+  /* font-size: 0.8rem; */
+}
+
+/* ============= temporary ============= */
+.border-orange {
+  border: 3px dashed orange;
+}
+
+
+/* 
+Grid styling  
+*/
+
+/* ========== Section-1 Grid =========== */
+.address-container {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr)); 
+  grid-gap: 20px;   
+}
+
+/* ========== Section-2 Grid =========== */
+.sec2-container-1 {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(80px, 1fr)); 
+  grid-gap: 20px;  
+}
+
+.sec2-container-2 {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr)); 
+  grid-gap: 20px;  
+}
